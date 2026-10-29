@@ -8,6 +8,11 @@ const PROYECTOS = [
   {
     id: 'hielo', n: '01', tipo: 'Documental transmedia · Perú', titulo: 'Un sueño sobre hielo',
     rol: 'Dirección de fotografía. Desarrollo del minijuego y de todo el sitio web.',
+    links: [
+      ['Visitar sitio web', 'https://patinaje-sobre-hielo-doc.gt.tc/'],
+      ['Jugar minijuego', 'https://patinaje-sobre-hielo-doc.gt.tc/brazos_transmedia/videojuego/index.php'],
+      ['Ver serie web', 'https://patinaje-sobre-hielo-doc.gt.tc/brazos_transmedia/serie_web/index.php'],
+    ],
     texto: 'El primer documental transmedia sobre el patinaje sobre hielo en el Perú. Cuenta la historia del deporte, sus atletas y sus rincones a través de tres plataformas, cada una con su propia narrativa: un documental, un minijuego y una serie web. Realizado con el apoyo de la Federación Peruana de Patinaje sobre Hielo.',
     video: 'https://youtu.be/QVhK3U_rjak',
     frames: [
@@ -15,7 +20,9 @@ const PROYECTOS = [
       { slate: true, kind: 'Serie web · 1', name: 'Hielo en movimiento', play: true, video: 'https://youtu.be/CIA5K7M0akY' },
       { slate: true, kind: 'Serie web · 2', name: 'Hielo en movimiento', play: true, video: 'https://youtu.be/Y7ULjqLBUzM' },
       { slate: true, kind: 'Serie web · 3', name: 'Hielo en movimiento', play: true, video: 'https://youtu.be/OhKCHwrNcl8' },
-      { slate: true, kind: 'Serie web · 4', name: 'Hielo en movimiento', play: true, video: 'https://youtu.be/JXQD2d3WeX8' },    ],
+      { slate: true, kind: 'Serie web · 4', name: 'Hielo en movimiento', play: true, video: 'https://youtu.be/JXQD2d3WeX8' },
+      { slate: true, kind: 'Minijuego', name: 'Jugar desafío sobre hielo', href: 'https://patinaje-sobre-hielo-doc.gt.tc/brazos_transmedia/videojuego/index.php' },
+      { slate: true, kind: 'Sitio web', name: 'Visitar el sitio', href: 'https://patinaje-sobre-hielo-doc.gt.tc/' },    ],
   },
   {
     id: 'sentir', n: '02', tipo: 'Cortometraje de ficción', titulo: 'Sentir',
@@ -326,7 +333,7 @@ function openProject(p, frame) {
   if (p.rol) body += `<p class="rol"><strong>Mi rol:</strong> ${esc(p.rol)}</p>`;
   if (p.creditos) body += '<dl class="credits">' + p.creditos.map(([a, b]) => `<div><dt>${esc(a)}</dt><dd>${esc(b)}</dd></div>`).join('') + '</dl>';
   if (p.docs && p.docs.length) body += '<div class="doclist">' + p.docs.map(([a, h]) => `<a href="${h}" target="_blank" rel="noopener">${esc(a)} (PDF)</a>`).join('') + '</div>';
-  if (p.links) body += '<div class="doclist">' + p.links.map(([a, h]) => `<a href="${h}" target="_blank" rel="noopener">${esc(a)} ↗</a>`).join('') + '</div>';
+  if (p.links) body += '<div class="doclist btns">' + p.links.map(([a, h]) => `<a href="${h}" target="_blank" rel="noopener">${esc(a)} ↗</a>`).join('') + '</div>';
   vBody.innerHTML = body;
   openDialog();
 }

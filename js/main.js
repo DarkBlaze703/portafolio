@@ -45,10 +45,10 @@ const PROYECTOS = [
       ['Presupuesto', 'assets/docs/sentir-presupuesto.pdf'],
     ],
     frames: [
+      { slate: true, kind: 'Cortometraje', name: 'Ver el corto', play: true },
       { img: 'assets/img/sentir-afiche.jpg', pos: '50% 0%', alt: 'Afiche de Sentir: boca iluminada de azul', big: true },
       { img: 'assets/img/sentir-afiche.jpg', pos: '50% 52%', alt: 'Afiche de Sentir: manos y un círculo verde', big: true },
       { img: 'assets/img/sentir-afiche.jpg', pos: '50% 100%', alt: 'Afiche de Sentir: ojos de una mujer en tono violeta', big: true },
-      { slate: true, kind: 'Cortometraje', name: 'Ver el corto', play: true },
     ],
   },
   {

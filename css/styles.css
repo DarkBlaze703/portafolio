@@ -124,11 +124,11 @@ h1 {
 .circle { position: absolute; inset: -4% -6%; width: 112%; height: 108%; overflow: visible; pointer-events: none; }
 .circle path {
   fill: none; stroke: var(--pencil); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round;
-  vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1;
+  vector-effect: non-scaling-stroke; stroke-dasharray: 3000; stroke-dashoffset: 3000;
 }
 .picked .circle path { stroke-dashoffset: 0; }
 .js .picked .circle path { animation: pencil 1.1s 0.9s var(--ease) both; }
-@keyframes pencil { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes pencil { from { stroke-dashoffset: 3000; } to { stroke-dashoffset: 0; } }
 
 .hero-note {
   position: absolute; left: var(--gut); bottom: 22px; z-index: 2;

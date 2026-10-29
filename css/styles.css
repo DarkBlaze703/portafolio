@@ -277,6 +277,8 @@ dialog#visor::backdrop { background: oklch(0.1 0.01 260 / 0.82); }
 .visor-meta { font-family: var(--f-mono); font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pencil-ink); }
 .visor-info h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 850; font-stretch: 106%; line-height: 1; text-transform: uppercase; letter-spacing: -0.015em; }
 .visor-info p { color: var(--ink-soft); max-width: 52ch; }
+.visor-info .rol { color: var(--ink); }
+.visor-info .rol strong { font-family: var(--f-mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--pencil-ink); }
 .credits { display: grid; gap: 4px; font-size: 0.9375rem; }
 .credits div { display: flex; flex-wrap: wrap; gap: 0 8px; }
 .credits dt { font-weight: 700; }

@@ -7,6 +7,7 @@
 const PROYECTOS = [
   {
     id: 'hielo', n: '01', tipo: 'Documental transmedia · Perú', titulo: 'Un sueño sobre hielo',
+    rol: 'Dirección de fotografía. Desarrollo del minijuego y de todo el sitio web.',
     texto: 'El primer documental transmedia sobre el patinaje sobre hielo en el Perú. Cuenta la historia del deporte, sus atletas y sus rincones a través de tres plataformas, cada una con su propia narrativa: un documental, un minijuego y una serie web. Realizado con el apoyo de la Federación Peruana de Patinaje sobre Hielo.',
     video: 'https://youtu.be/QVhK3U_rjak',
     frames: [
@@ -14,12 +15,12 @@ const PROYECTOS = [
       { slate: true, kind: 'Serie web · 1', name: 'Hielo en movimiento', play: true, video: 'https://youtu.be/CIA5K7M0akY' },
       { slate: true, kind: 'Serie web · 2', name: 'Hielo en movimiento', play: true, video: 'https://youtu.be/Y7ULjqLBUzM' },
       { slate: true, kind: 'Serie web · 3', name: 'Hielo en movimiento', play: true, video: 'https://youtu.be/OhKCHwrNcl8' },
-      { slate: true, kind: 'Serie web · 4', name: 'Hielo en movimiento', play: true, video: 'https://youtu.be/JXQD2d3WeX8' },
-    ],
+      { slate: true, kind: 'Serie web · 4', name: 'Hielo en movimiento', play: true, video: 'https://youtu.be/JXQD2d3WeX8' },    ],
   },
   {
     id: 'sentir', n: '02', tipo: 'Cortometraje de ficción', titulo: 'Sentir',
     video: 'https://youtu.be/y6GPLgkCXAw',
+    rol: 'Codirección.',
     texto: 'Cortometraje dramático y sensorial, producido por Stereo Films. Sigue a Laura, una joven universitaria atrapada en la monotonía y el vacío emocional de su rutina, que busca escapar de esa desconexión.',
     creditos: [
       ['Dirección', 'Christian Vasquez, Renzo Pachas'],
@@ -46,6 +47,7 @@ const PROYECTOS = [
   {
     id: 'documental', n: '03', tipo: 'Documental · 5 a 8 min', titulo: 'Taichí, una fuente de vida para la tercera edad',
     video: 'https://youtu.be/YD7GNjqUU5o',
+    rol: 'Dirección.',
     texto: 'Un adulto mayor que atravesó la pandemia con ansiedad y encierro descubre en un programa de Tai Chi una forma de recuperar el cuerpo, el sueño y la calma. Su compañera de práctica y la instructora completan el retrato.',
     docs: [],
     frames: [
@@ -55,6 +57,7 @@ const PROYECTOS = [
   {
     id: 'podcast', n: '04', tipo: 'Podcast en video', titulo: 'Plan C',
     video: 'https://youtu.be/FJ6arwOfTvo',
+    rol: 'Producción.',
     texto: 'Plan C, episodio piloto. Porque el plan A y B ya fueron…',
     docs: [['Informe del proyecto', 'assets/docs/podcast-plan-c.pdf']],
     frames: [
@@ -312,7 +315,7 @@ function openPhoto(p, i) {
   openDialog();
 }
 function openProject(p, frame) {
-  const embed = toEmbed((frame && frame.video) || p.video);
+  const embed = (frame && frame.embed) || toEmbed((frame && frame.video) || p.video);
   if (frame && frame.big) vMedia.innerHTML = `<img src="${frame.img}" alt="${esc(frame.alt)}">`;
   else if (p.audio) vMedia.innerHTML = `<div class="soon listen"><strong>${esc(p.titulo)}</strong><span>${esc(p.tipo)}</span><audio controls preload="metadata" src="${p.audio}">Tu navegador no puede reproducir este audio.</audio></div>`;
   else if (embed) vMedia.innerHTML = `<iframe class="embed" src="${embed}" title="${esc(p.titulo)}" allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>`;
@@ -320,6 +323,7 @@ function openProject(p, frame) {
   vMeta.textContent = `${p.n} · ${p.tipo}`;
   vTitle.textContent = p.titulo;
   let body = `<p>${esc(p.texto)}</p>`;
+  if (p.rol) body += `<p class="rol"><strong>Mi rol:</strong> ${esc(p.rol)}</p>`;
   if (p.creditos) body += '<dl class="credits">' + p.creditos.map(([a, b]) => `<div><dt>${esc(a)}</dt><dd>${esc(b)}</dd></div>`).join('') + '</dl>';
   if (p.docs && p.docs.length) body += '<div class="doclist">' + p.docs.map(([a, h]) => `<a href="${h}" target="_blank" rel="noopener">${esc(a)} (PDF)</a>`).join('') + '</div>';
   if (p.links) body += '<div class="doclist">' + p.links.map(([a, h]) => `<a href="${h}" target="_blank" rel="noopener">${esc(a)} ↗</a>`).join('') + '</div>';

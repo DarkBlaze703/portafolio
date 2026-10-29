@@ -103,7 +103,7 @@ const FOTOS = [
       { img: 'assets/img/img_7814.jpg', alt: 'Set de estudio con pantalla verde, luces y equipo de cámara' },
       { img: 'assets/img/img_9939.jpg', alt: 'Retrato a color con una mano frente al rostro, luz cálida' },
       { img: 'assets/img/img_7286.jpg', alt: 'Modelo con vestido negro de mangas amplias y maquillaje artístico sobre fondo blanco de estudio' },
-      { img: 'assets/img/img_7453.jpg', alt: 'Panel de cinco ponentes sentados en el escenario de un auditorio durante el congreso' },
+      { img: 'assets/img/img_7453.jpg', alt: 'Mesa de diálogo con cinco ponentes en el escenario del auditorio durante CONECOM V (2026)' },
       { img: 'assets/img/paisaje04.jpg', alt: 'Carretera entre campos y cielo nublado' },
       { img: 'assets/img/img_7821.jpg', alt: 'Joven sonriendo con el signo de la paz frente a una pantalla verde y una luz LED' },
       { img: 'assets/img/img_0433.jpg', alt: 'Retrato de perfil con luz verde y fondo rojo' },

@@ -14,8 +14,8 @@
   --f-mono: "Martian Mono", ui-monospace, Consolas, monospace;
 
   --u: 8px;
-  --gut: clamp(16px, 4vw, 56px);
-  --fw: clamp(236px, 26vw, 372px);
+  --gut: clamp(16px, 3vw, 44px);
+  --fw: clamp(250px, 29vw, 460px);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
   color-scheme: light;
@@ -80,10 +80,10 @@ ul, dl, dd { margin: 0; padding: 0; list-style: none; }
 }
 .hero-copy { position: relative; z-index: 2; padding-right: 24px; }
 h1 {
-  font-size: clamp(3.2rem, 7.4vw, 5.5rem); font-weight: 850; font-stretch: 108%;
+  font-size: clamp(3.2rem, 7.8vw, 6rem); font-weight: 850; font-stretch: 108%;
   line-height: 0.92; letter-spacing: -0.025em; text-transform: uppercase;
 }
-.hero-role { margin-top: 28px; max-width: 34ch; font-size: 1.1875rem; color: var(--ink-soft); }
+.hero-role { margin-top: 28px; max-width: 38ch; font-size: 1.3rem; color: var(--ink-soft); }
 .hero-actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
 .btn {
   display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px;
@@ -103,7 +103,7 @@ h1 {
   display: flex; flex-direction: column; justify-content: center; gap: 22px;
 }
 .rail {
-  --cw: clamp(190px, 21vw, 320px);
+  --cw: clamp(210px, 24vw, 400px);
   background: var(--film); padding: 20px 0; position: relative; border-radius: 3px; overflow: hidden;
   box-shadow: 0 18px 36px -12px oklch(0 0 0 / 0.3), 0 4px 10px -4px oklch(0 0 0 / 0.25);
 }
@@ -136,24 +136,24 @@ h1 {
 }
 
 /* ---------- hoja de contactos ---------- */
-.sheet { padding: clamp(72px, 10vw, 140px) 0 0; }
+.sheet { padding: clamp(56px, 7vw, 110px) 0 0; }
 .sheet:last-of-type { padding-bottom: clamp(72px, 10vw, 140px); }
-.sheet-head { padding: 0 var(--gut); max-width: 1400px; margin: 0 auto 40px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
-.sheet-head h2 { font-size: clamp(2.4rem, 5.4vw, 4.5rem); font-weight: 850; font-stretch: 105%; line-height: 0.95; text-transform: uppercase; letter-spacing: -0.02em; }
-.sheet-head p { max-width: 58ch; color: var(--ink-soft); }
+.sheet-head { padding: 0 var(--gut); max-width: 1760px; margin: 0 auto 32px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+.sheet-head h2 { font-size: clamp(2.6rem, 6vw, 5.5rem); font-weight: 850; font-stretch: 105%; line-height: 0.95; text-transform: uppercase; letter-spacing: -0.02em; }
+.sheet-head p { max-width: 72ch; font-size: 1.125rem; color: var(--ink-soft); }
 
 #strips, #photo-strips { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); }
 
 .strip {
   position: relative; background: var(--film); color: var(--table);
-  padding: 20px 0; margin: 0 var(--gut); max-width: 1400px; min-width: 0;
+  padding: 24px 0; margin: 0 var(--gut); max-width: 1760px; min-width: 0;
   border-radius: 3px;
   box-shadow: 0 18px 36px -14px oklch(0 0 0 / 0.32), 0 4px 10px -4px oklch(0 0 0 / 0.25);
 }
-@media (min-width: 1500px) { .strip { margin-inline: auto; } }
+@media (min-width: 1850px) { .strip { margin-inline: auto; } }
 .strip-head {
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  padding: 6px 16px 10px;
+  padding: 6px 20px 12px;
   font-family: var(--f-mono); font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--edge);
 }
 .strip-head .code { display: flex; gap: 14px; flex-wrap: wrap; }
@@ -164,14 +164,16 @@ h1 {
 }
 .strip-open:hover { background: var(--edge); color: var(--film); }
 .strip-title {
-  padding: 0 16px 14px; font-weight: 850; font-stretch: 110%; font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+  padding: 0 20px 16px; font-weight: 850; font-stretch: 110%; font-size: clamp(1.8rem, 3.6vw, 3.2rem);
   line-height: 1; text-transform: uppercase; letter-spacing: -0.015em; color: var(--table);
 }
 .strip-frames {
-  display: flex; gap: 8px; padding: 0 16px 4px; overflow-x: auto; scroll-snap-type: x proximity;
-  scroll-padding-inline: 16px; overscroll-behavior-x: contain;
+  display: flex; gap: 10px; padding: 0 20px 6px; overflow-x: auto; scroll-snap-type: x proximity;
+  scroll-padding-inline: 20px; overscroll-behavior-x: contain;
 }
-.strip-frames.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); overflow: visible; gap: 8px; padding-bottom: 8px; }
+.frame-note { flex: 1 0 280px; max-width: 72ch; align-self: stretch; display: grid; align-content: center; gap: 12px; padding: 0 16px 0 24px; color: oklch(0.88 0.015 220); font-size: 1.0625rem; line-height: 1.5; }
+.frame-note .rol strong { display: block; font-family: var(--f-mono); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--edge); margin-bottom: 2px; }
+.strip-frames.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); overflow: visible; gap: 10px; padding-bottom: 10px; }
 .strip-frames.grid .frame { width: 100%; }
 .frame {
   position: relative; flex: none; width: var(--fw); aspect-ratio: 3 / 2; overflow: hidden;
@@ -196,6 +198,7 @@ h1 {
   background: var(--film-2); display: grid; align-content: space-between; padding: 14px 16px 26px;
 }
 .frame-slate .slate-kind { font-family: var(--f-mono); font-size: 0.6875rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--edge); }
+.frame-slate .slate-name { padding-right: 52px; }
 .frame-slate .slate-name { font-size: clamp(1.6rem, 2.6vw, 2.3rem); font-weight: 850; font-stretch: 108%; line-height: 0.98; text-transform: uppercase; color: var(--table); }
 .frame-slate .slate-play { position: absolute; right: 14px; bottom: 12px; width: 44px; height: 44px; border-radius: 50%; background: var(--pencil); display: grid; place-items: center; color: var(--film); transition: transform 0.3s var(--ease); }
 a.frame-slate { text-decoration: none; cursor: pointer; }
@@ -223,23 +226,23 @@ a.frame-slate { text-decoration: none; cursor: pointer; }
 .play[aria-pressed="true"] { background: var(--pencil); color: var(--film); }
 
 /* ---------- trayectoria (cuarto oscuro) ---------- */
-.about { background: var(--film); color: var(--table); padding: clamp(72px, 10vw, 140px) var(--gut); }
-.about-in { max-width: 1100px; margin: 0 auto; display: grid; gap: 40px; }
-.about h2 { font-size: clamp(2.4rem, 5.4vw, 4.5rem); font-weight: 850; font-stretch: 105%; line-height: 0.95; text-transform: uppercase; letter-spacing: -0.02em; color: var(--edge); }
-.about-lead { font-size: clamp(1.3rem, 2.4vw, 1.9rem); line-height: 1.3; max-width: 30ch; font-weight: 500; }
+.about { background: var(--film); color: var(--table); padding: clamp(56px, 7vw, 110px) var(--gut); }
+.about-in { max-width: 1500px; margin: 0 auto; display: grid; gap: 40px; }
+.about h2 { font-size: clamp(2.6rem, 6vw, 5.5rem); font-weight: 850; font-stretch: 105%; line-height: 0.95; text-transform: uppercase; letter-spacing: -0.02em; color: var(--edge); }
+.about-lead { font-size: clamp(1.4rem, 2.8vw, 2.3rem); line-height: 1.3; max-width: 40ch; font-weight: 500; }
 .log { display: grid; }
-.log-row { display: grid; grid-template-columns: minmax(120px, 190px) 1fr; gap: 24px; padding: 22px 0; border-top: 1px solid oklch(0.4 0.02 260); }
+.log-row { display: grid; grid-template-columns: minmax(140px, 240px) 1fr; gap: 32px; padding: 26px 0; border-top: 1px solid oklch(0.4 0.02 260); }
 .log-row dt { font-family: var(--f-mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--edge); padding-top: 4px; }
 .log-row dd strong { display: block; font-size: 1.25rem; font-weight: 750; line-height: 1.25; }
 .log-row dd span { display: block; color: oklch(0.8 0.02 220); }
-.log-row dd p { margin-top: 10px; max-width: 62ch; color: oklch(0.86 0.015 220); }
+.log-row dd p { margin-top: 10px; max-width: 82ch; color: oklch(0.86 0.015 220); }
 .tools { display: flex; flex-wrap: wrap; gap: 8px; }
 .tools li { font-family: var(--f-mono); font-size: 0.75rem; padding: 7px 12px; border: 1px solid oklch(0.5 0.02 260); border-radius: 2px; }
 
 /* ---------- contacto ---------- */
-.contact { background: var(--pencil); color: var(--film); padding: clamp(72px, 10vw, 140px) var(--gut) 40px; }
-.contact-in { max-width: 1100px; margin: 0 auto; display: grid; gap: 28px; }
-.contact h2 { font-size: clamp(2.4rem, 6vw, 5rem); font-weight: 850; font-stretch: 105%; line-height: 0.95; text-transform: uppercase; letter-spacing: -0.02em; max-width: 14ch; }
+.contact { background: var(--pencil); color: var(--film); padding: clamp(56px, 7vw, 110px) var(--gut) 40px; }
+.contact-in { max-width: 1500px; margin: 0 auto; display: grid; gap: 28px; }
+.contact h2 { font-size: clamp(2.6rem, 6.4vw, 6rem); font-weight: 850; font-stretch: 105%; line-height: 0.95; text-transform: uppercase; letter-spacing: -0.02em; max-width: 14ch; }
 .mail { font-size: clamp(1.4rem, 4vw, 3rem); font-weight: 700; font-stretch: 105%; word-break: break-all; width: fit-content; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 10px 28px; font-family: var(--f-mono); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.04em; }
 .contact-links a { display: inline-block; padding: 10px 0; }
@@ -250,7 +253,7 @@ a.frame-slate { text-decoration: none; cursor: pointer; }
 /* ---------- visor ---------- */
 dialog#visor {
   padding: 0; border: 0; background: var(--table); color: var(--ink);
-  width: min(1180px, calc(100vw - 24px)); max-height: calc(100svh - 24px);
+  width: min(1440px, calc(100vw - 32px)); max-height: calc(100svh - 24px);
   border-radius: 4px; overflow: hidden;
   box-shadow: 0 30px 80px -20px oklch(0 0 0 / 0.6);
 }
@@ -273,7 +276,7 @@ dialog#visor::backdrop { background: oklch(0.1 0.01 260 / 0.82); }
 .soon audio { width: min(100%, 460px); margin: 6px auto 0; accent-color: var(--pencil); }
 .soon strong { font-weight: 850; font-stretch: 108%; text-transform: uppercase; font-size: clamp(1.4rem, 3vw, 2.4rem); }
 .soon span { font-family: var(--f-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--edge); }
-.visor-info { padding: 40px 28px 28px; overflow-y: auto; max-height: calc(100svh - 24px); display: grid; align-content: start; gap: 14px; }
+.visor-info { padding: 44px 34px 32px; overflow-y: auto; max-height: calc(100svh - 24px); display: grid; align-content: start; gap: 14px; }
 .visor-meta { font-family: var(--f-mono); font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pencil-ink); }
 .visor-info h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 850; font-stretch: 106%; line-height: 1; text-transform: uppercase; letter-spacing: -0.015em; }
 .visor-info p { color: var(--ink-soft); max-width: 52ch; }

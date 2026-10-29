@@ -173,6 +173,11 @@ function buildStrip(p, host, isPhoto) {
     node.setAttribute('role', 'listitem');
     row.appendChild(node);
   });
+  if (!isPhoto && p.frames.length < 4 && p.texto) {
+    const note = el('div', 'frame-note');
+    note.innerHTML = `<p>${esc(p.texto)}</p>` + (p.rol ? `<p class="rol"><strong>Mi rol</strong> ${esc(p.rol)}</p>` : '');
+    row.appendChild(note);
+  }
   strip.appendChild(row);
   host.appendChild(strip);
   return strip;

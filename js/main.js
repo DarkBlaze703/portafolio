@@ -90,11 +90,20 @@ const PROYECTOS = [
       { slate: true, kind: 'Cuento radiofónico', name: 'Los 3 cerditos', play: true },
     ],
   },
+  {
+    id: 'moroder', n: '07', tipo: 'Programa de radio · Biografía sonora · 4:40', titulo: 'El sonido del futuro: Giorgio Moroder',
+    audio: 'assets/audio/giorgio-moroder.mp3',
+    rol: 'Locución, guion y edición.',
+    texto: 'Biografía sonora del productor Giorgio Moroder: su trayectoria narrada y sus canciones más icónicas entre las voces. Dale play para escucharla.',
+    frames: [
+      { slate: true, kind: 'Biografía sonora', name: 'Giorgio Moroder', play: true },
+    ],
+  },
 ];
 
 const FOTOS = [
   {
-    id: 'fotos', n: '07', tipo: 'Fotografía', titulo: 'Retrato, paisaje y eventos',
+    id: 'fotos', n: '08', tipo: 'Fotografía', titulo: 'Retrato, paisaje y eventos',
     frames: [
       { img: 'assets/img/retrato01.jpg', alt: 'Retrato en blanco y negro, una mano abierta cubre parte del rostro' },
       { img: 'assets/img/img_7293.jpg', alt: 'Retrato en primer plano con maquillaje artístico rojo, peinado alto y uñas largas' },

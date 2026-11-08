@@ -38,12 +38,6 @@ const PROYECTOS = [
       ['Maquillaje y vestuario', 'Mariafernanda Chavarri'],
       ['Producción', 'Abigail Zapata, Fatima Choccelahua'],
     ],
-    docs: [
-      ['Guion', 'assets/docs/sentir-guion.pdf'],
-      ['Escaleta', 'assets/docs/sentir-escaleta.pdf'],
-      ['Plan de rodaje', 'assets/docs/sentir-plan-de-rodaje.pdf'],
-      ['Presupuesto', 'assets/docs/sentir-presupuesto.pdf'],
-    ],
     frames: [
       { slate: true, kind: 'Cortometraje', name: 'Ver el corto', play: true },
       { img: 'assets/img/sentir-afiche.jpg', pos: '50% 0%', alt: 'Afiche de Sentir: boca iluminada de azul', big: true },
@@ -56,7 +50,6 @@ const PROYECTOS = [
     video: 'https://youtu.be/YD7GNjqUU5o',
     rol: 'Dirección.',
     texto: 'Un adulto mayor que atravesó la pandemia con ansiedad y encierro descubre en un programa de Tai Chi una forma de recuperar el cuerpo, el sueño y la calma. Su compañera de práctica y la instructora completan el retrato.',
-    docs: [],
     frames: [
       { slate: true, kind: 'Documental', name: 'Taichí, una fuente de vida', play: true },
     ],
@@ -65,16 +58,14 @@ const PROYECTOS = [
     id: 'podcast', n: '04', tipo: 'Podcast en video', titulo: 'Plan C',
     video: 'https://youtu.be/FJ6arwOfTvo',
     rol: 'Producción.',
-    texto: 'Plan C, episodio piloto. Porque el plan A y B ya fueron…',
-    docs: [['Informe del proyecto', 'assets/docs/podcast-plan-c.pdf']],
+    texto: 'Episodio piloto de Plan C, un podcast en video. Porque el plan A y B ya fueron…',
     frames: [
       { slate: true, kind: 'Podcast', name: 'Plan C', play: true },
     ],
   },
   {
     id: 'spots', n: '05', tipo: 'Spots radiales · 3 piezas', titulo: 'Spots radiales',
-    texto: 'Tres spots de radio: Elecciones, Salud Mental y Lumina. Dale play y mira cómo responden las agujas.',
-    docs: [['Informe del taller', 'assets/docs/spots-practica.pdf']],
+    texto: 'Tres spots de radio creados en el taller de radio: Elecciones, Salud mental y Lumina. Dale play y mira cómo responden las agujas.',
     frames: [
       { audio: 'assets/audio/spot-elecciones.wav', name: 'Elecciones' },
       { audio: 'assets/audio/spot-salud-mental.wav', name: 'Salud mental' },
@@ -85,7 +76,6 @@ const PROYECTOS = [
     id: 'cuento', n: '06', tipo: 'Cuento radiofónico', titulo: 'Los 3 cerditos',
     audio: 'assets/audio/cuento-los-3-cerditos.wav',
     texto: 'Cuento radiofónico narrado, del taller de radio. Dale play para escucharlo.',
-    docs: [['Informe del taller', 'assets/docs/cuento-practica-de-campo.pdf']],
     frames: [
       { slate: true, kind: 'Cuento radiofónico', name: 'Los 3 cerditos', play: true },
     ],
